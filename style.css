@@ -66,6 +66,7 @@ button, .colorBox {
     border: 2px solid #EEEEEE;
     border-radius: 10px;
     font-size:12px;
+    font-weight: bold;
     font-family:'Courier New', Courier, monospace;
     color: #222831;
 

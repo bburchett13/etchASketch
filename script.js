@@ -73,7 +73,7 @@ function draw(event) {
     }
     else if (drawMode === 'eraser') {
 
-        color = 'white';
+        color = '#EEEEEE';
 
     }
     
