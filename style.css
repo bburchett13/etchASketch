@@ -26,8 +26,6 @@ body {
 
 }
 
-
-
 .footer {
 
     background-color: #849DAB;
@@ -40,7 +38,7 @@ body {
 #gridContainer {
 
     display:flex;
-    margin: 5%;
+    margin-bottom: 5%;
     flex-wrap:wrap;
     width:600px;
     height:600px;
