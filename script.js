@@ -1,5 +1,8 @@
+
+
 let dim = 10;
 let drawMode = 'pen';
+let penColor = 'black';
 buildGrid(dim);
 
 // Defining Buttons
@@ -61,7 +64,7 @@ function draw(event) {
     const element = event.target;
     if (drawMode === 'pen') {
 
-        color = 'black';
+        color = penColor;
 
     }
     else if (drawMode === 'eraser') {
@@ -74,3 +77,9 @@ function draw(event) {
 
 }
 
+const colorPicker = document.querySelector('#colorSelector');
+colorPicker.addEventListener('input', (e) => {
+
+    penColor = e.target.value;
+
+});

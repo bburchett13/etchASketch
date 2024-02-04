@@ -24,10 +24,31 @@ body {
 
 }
 
-button {
+button, .colorBox {
 
     margin: 10px;
     padding: 10px;
+    background-color: lightblue;
+    border: 2px solid;
+    border-radius: 4px;
+
+}
+
+.colorBox {
+
+    padding:0px;
+    padding-left:10px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+#colorSelector {
+
+    padding:1px;
+    margin:10px;
 
 }
 
@@ -37,3 +58,4 @@ button {
     flex-direction: column;
 
 }
+
