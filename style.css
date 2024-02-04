@@ -1,20 +1,52 @@
 body {
 
     display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin:0px;
+    background-color:#282130;
+    justify-content: space-around;
+
+}
+
+.header, .footer {
+
+    font-size: 36px;
+    color: #24788F;
+    text-align: center;
+
+}
+
+.main {
+
+    display: flex;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+
+}
+
+
+
+.footer {
+
+    background-color: #849DAB;
+    bottom:0;
+    width:100%;
+    position:absolute;
 
 }
 
 #gridContainer {
 
     display:flex;
-    flex: auto;
+    margin: 5%;
     flex-wrap:wrap;
-    width:400px;
-    height:400px;
+    width:600px;
+    height:600px;
     flex: 0 0 auto;
-    justify-content: center;
-    border: 2px solid black;
+    /* justify-content: center; */
+    border: 10px solid black;
 
 }
 
@@ -28,7 +60,7 @@ button, .colorBox {
 
     margin: 10px;
     padding: 10px;
-    background-color: lightblue;
+    background-color: #F18A85;
     border: 2px solid;
     border-radius: 4px;
 
@@ -41,6 +73,7 @@ button, .colorBox {
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
+    justify-content: center;
     flex-direction: row;
 
 }

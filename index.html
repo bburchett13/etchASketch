@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
     <head>
 
         <meta charset="UTF-8">
+
         <title>Etch-A-Sketch</title>
 
         <link rel="stylesheet" href="style.css">
@@ -14,26 +15,42 @@
 
     <body>
 
-        <div class="left">
+        <div class="header">
 
-            <button id="gridSize">Click to Set Grid Size!</button>
-
-            <button id="pen">Click me to select the pen!</button>
-
-            <button id="eraser">Click me to use an eraser!</button>
-
-            <div class="colorBox">
-                <div class="colorText">Click to change color: </div>
-                <input id="colorSelector" type='color' value='#000000'>
-                
-            </div>
-            <!-- <div id="root"></div> -->
-
-            <button id="clear">Click me to clear the drawing!</button>
-
+            <h2>Etch-A-Sketch</h2>
 
         </div>
-        <div id="gridContainer"></div>
+
+        <div class="main">
+
+            <div class="left">
+
+                <button id="gridSize">Click to Set Grid Size!</button>
+
+                <button id="pen">Click me to select the pen!</button>
+
+                <button id="eraser">Click me to use an eraser!</button>
+
+                <div class="colorBox">
+
+                    <div class="colorText">Click to change color: </div>
+                    <input id="colorSelector" type='color' value='#000000'>
+                    
+                </div>
+
+                <button id="clear">Click me to clear the drawing!</button>
+
+            </div>
+
+            <div id="gridContainer"></div>
+
+        </div>
+
+        <div class="footer">
+
+            <div class="footerText">Made by Blake</div>
+
+        </div>
 
     </body>
 

@@ -1,4 +1,8 @@
 
+let el = document.querySelector("#gridContainer");
+
+let gridWidth = el.clientWidth;
+let gridHeight = el.clientHeight;
 
 let dim = 10;
 let drawMode = 'pen';
@@ -50,8 +54,8 @@ function buildGrid(dim) {
         gridElement.className = "gridElement";
         gridElement.addEventListener('mouseover', draw);
         gridElement.addEventListener('mousedown', draw);
-        gridElement.style.width = `${400/dim}px`;
-        gridElement.style.height = `${400/dim}px`;
+        gridElement.style.width = `${gridWidth/dim}px`;
+        gridElement.style.height = `${gridHeight/dim}px`;
         document.getElementById("gridContainer").appendChild(gridElement);
     
     }
@@ -81,5 +85,6 @@ const colorPicker = document.querySelector('#colorSelector');
 colorPicker.addEventListener('input', (e) => {
 
     penColor = e.target.value;
+    drawMode = 'pen';
 
 });
