@@ -1,7 +1,22 @@
-#grid-container {
+#gridContainer {
 
     display:flex;
-    justify-content: space-around;
-    
+    flex: auto;
+    width:400px;
+    height:400px;
+    justify-content: center;
+    border: 2px solid black;
+
+}
+
+.gridElement {
+
+    background-color:white;
+
+}
+
+.gridElement:hover {
+
+    background-color: black;
 
 }
