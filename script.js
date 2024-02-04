@@ -1,19 +1,22 @@
-let dim = 32;
+let dim = 9;
 
-for (let j = 0; j < dim; j++) {
+// Creating the grid
+for (let i = 0; i < dim; i++) {
+    let gridElement = document.createElement("div");
+    gridElement.className = "gridElement";
+    gridElement.addEventListener('mouseover', draw);
+    gridElement.addEventListener('mousedown', draw);
+    gridElement.style.width = `${400/Math.sqrt(dim)}px`;
+    gridElement.style.height = `${400/Math.sqrt(dim)}px`;
+    document.getElementById("gridContainer").appendChild(gridElement);
 
-    let gridRow = document.createElement("div");
-    gridRow.className = "gridRow";
-    gridRow.id = `row${j}`;
-    document.getElementById("gridContainer").appendChild(gridRow);
-
-    for (let i = 0; i < dim; i++) {
-        let gridElement = document.createElement("div");
-        gridElement.className = "gridElement";
-        gridElement.style.width = `${400/dim}px`;
-        gridElement.style.height = `${400/dim}px`;
-        document.getElementById(`row${j}`).appendChild(gridElement);
-    
-    }
 }
 
+// Function to handle drawing
+function draw(event) {
+    if (event.type === 'mouseover' && !event.buttons) return;
+    const gridElement = event.target;
+    color = 'black';
+    cell.style.backgroundColor = color;
+
+}
