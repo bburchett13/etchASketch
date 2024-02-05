@@ -58,16 +58,31 @@ function getGridSize(){
 // Function to create the grid
 function buildGrid(dim) {
     document.getElementById("gridContainer").innerHTML = '';
-    for (let i = 0; i < dim**2; i++) {
-        let gridElement = document.createElement("div");
-        gridElement.className = "gridElement";
-        gridElement.addEventListener('mouseover', draw);
-        gridElement.addEventListener('mousedown', draw);
-        gridElement.style.width = `${gridWidth/dim}px`;
-        gridElement.style.height = `${gridHeight/dim}px`;
-        document.getElementById("gridContainer").appendChild(gridElement);
-    
+    for (let j = 0; j < dim; j++) {
+
+        let gridRow = document.createElement('div');
+        gridRow.className = 'gridRow';
+        gridRow.style.display = 'flex';
+        gridRow.style.flexShrink = '1';
+        gridRow.style.flexGrow = '1';
+        gridRow.id = `row${j}`;
+        document.getElementById('gridContainer').appendChild(gridRow);
+
+        for (let i = 0; i < dim; i++) {
+            let gridElement = document.createElement("div");
+            gridElement.className = "gridElement";
+            gridElement.addEventListener('mouseover', draw);
+            gridElement.addEventListener('mousedown', draw);
+            gridElement.style.width = `${gridWidth/dim}px`;
+            gridElement.style.height = `${gridHeight/dim}px`;
+            gridElement.style.flexGrow = '1';
+            gridElement.style.flexShrink = '1';
+            document.getElementById(`row${j}`).appendChild(gridElement);
+        
+        }
+
     }
+
 
 }
 

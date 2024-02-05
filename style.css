@@ -1,8 +1,10 @@
 body {
 
     display: flex;
+    min-height: 100vh;
     flex-direction: column;
     flex-wrap: nowrap;
+    flex-grow:1;
     margin:0px;
     background-color:#222831;
     justify-content: space-around;
@@ -31,7 +33,6 @@ body {
 
 .footer {
 
-    position:absolute;
     bottom:0;
     left: 0;
     display: flex;
@@ -39,6 +40,8 @@ body {
     align-items: center;
     justify-content: center;
     padding: 10px 0px;
+    margin-top: auto;
+    
 
 }
 
@@ -49,15 +52,20 @@ body {
     flex-wrap:wrap;
     width:600px;
     height:600px;
-    flex: 1 1 1;
+    
+    /* flex-basis: 600px; */
     border: 10px solid #00ADB5;
     border-radius:10px;
 
 }
 
+
 .gridElement {
 
     background-color:#EEEEEE;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink:1;
 
 }
 
@@ -98,6 +106,6 @@ button, .colorBox {
 
     display: flex;
     flex-direction: column;
-
+    
 }
 
