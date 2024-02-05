@@ -37,13 +37,22 @@ clearBtn.addEventListener('click', () => {
 //Function to get User Input for Grid Size
 function getGridSize(){
     
-    dim = prompt("Enter the desired grid dimension\nOnly integers from 1 to 100 are accepted");
-    if (dim < 1 || dim > 100 || dim % 1 != 0) {
+    let userInput = prompt("Enter the desired grid dimension.\nOnly integers from 1 to 100 are accepted.\nEntering a valid number will delete your artwork.");
 
-        dim = getGridSize();
+    if (userInput === null) {
+
+        return dim;
 
     }
+    if (userInput < 1 || userInput > 100 || userInput % 1 != 0) {
+
+        userInput = getGridSize();
+
+    }
+    
+    dim = userInput;
     buildGrid(dim);
+    return userInput;
 }
 
 // Function to create the grid
