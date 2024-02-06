@@ -48,7 +48,6 @@ body {
 #gridContainer {
 
     display:flex;
-    margin-bottom: 5%;
     flex-direction: column;
     flex-wrap:nowrap;
     width:600px;
