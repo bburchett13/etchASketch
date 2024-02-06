@@ -49,14 +49,19 @@ body {
 
     display:flex;
     margin-bottom: 5%;
-    flex-wrap:wrap;
+    flex-direction: column;
+    flex-wrap:nowrap;
     width:600px;
-    height:600px;
-    
-    /* flex-basis: 600px; */
+    height:600px;    
     border: 10px solid #00ADB5;
     border-radius:10px;
 
+}
+
+.gridRow {
+
+    flex-direction: row;
+    
 }
 
 
